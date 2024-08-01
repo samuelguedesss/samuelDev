@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Centralizar Título</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <h1>BEBA AGUA!!!</h1>
+</body>
+</html>
+
+informe seu peso<input>
+<button>quantidade de agua</button>
+
+<script>
+    
+   
+    
+    function aguapordia () {
+        var peso = document.querySelector("input")
+        var soma = peso.value * 35;
+        alert(" voce deve beber " + soma + " LT por dia de agua ");
+    }    
+
+    var button = document.querySelector("button");
+    
+    button.onclick = aguapordia;
+
+
+
+</script>
+

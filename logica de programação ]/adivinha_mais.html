@@ -1,0 +1,100 @@
+
+
+
+    <meta charset="UTF-8">
+
+    <input/>
+    <button>Compare com o meu segredo</button>
+    
+    <script>
+        function sorteia() {
+    
+           return Math.round(Math.random() * 10);
+    
+        }
+    
+        function sorteiaNumeros(quantidade) {
+    
+            var segredos = [];
+    
+            var numero = 1;
+    
+            while(numero <= quantidade) {
+    
+                  var numeroAleatorio = sorteia();
+                  var achou = false;
+    
+                  if (numeroAleatorio !== 0) {
+                         for(var posicao = 0; posicao < segredos.length; posicao++) {
+    
+                               if(segredos[posicao] == numeroAleatorio){
+                                    achou = true;
+                                    break;
+                               }
+    
+                         }
+    
+                         if (achou == false) {
+                               segredos.push(numeroAleatorio);
+                               numero++;
+                         }
+                  }
+    
+            }
+    
+            return segredos;
+    
+        }
+    
+        var segredos = sorteiaNumeros(3);
+    
+        console.log(segredos);
+    
+        var input = document.querySelector("input");
+        input.focus();
+    
+        function verifica() {
+    
+           var achou = false;
+    
+           for(var posicao = 0; posicao < segredos.length; posicao++) {
+    
+                  if(input.value == segredos[posicao]) {
+    
+                         alert("Você ACERTOU!");
+                         achou = true;
+                         break;
+                  } 
+           }
+    
+           if(achou == false) {
+    
+                  alert("Você ERROU!");
+           }
+    
+           input.value = "";
+           input.focus();
+    
+        }
+    
+        var button = document.querySelector("button");
+    
+        button.onclick = verifica;
+
+           // nova tag no html e o <input/> onde aparece na tela um campo onde eu posso colocar tanto um valor  de numuero quando uma string? 
+
+   // uma observação para eu deixar esse comando interativo usando o javascriot basta eu usar o document.querSelector("") e dentro do parets e da aspas dupla eu coloco o comando input.
+   
+   // nova tag no html é o  <button> onde eu crio um botão a onde eu posso cliclar e fazer um comando ou algo que você determinar para a função dele basta fazer a mesma coida que o input para eu usar ele no javascript
+    
+    // comando value ele recebe o valor que esta dentro do input.
+    
+    // comando input.value = ""; ele limpa a caixa de texto quando eu coloco outro resultadp
+
+    // comando input.focus(); mesmo depois de colocar um valor a caixa ainda fica piscando para colocar o valor de novo 
+
+    // dentro de uma variavel podemos colocar mais de valor utilizando o [] 
+
+    // para  que eu sempre que for adicionar um valor na minha variavel não fique alterando o codigo é se eu escrever a variavele colocar um .length 
+    
+    </script>

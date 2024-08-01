@@ -1,0 +1,29 @@
+
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function numero() {
+        return Math.floor(Math.random() * 10);
+    }
+
+    var numeroEscolhido = parseInt(prompt("Informe o seu número de 0 a 9"));
+    var numeroDaSorte = numero();
+
+    if (numeroDaSorte === numeroEscolhido) {
+        mostra("Você acertou!");
+    } else {
+        mostra("Você errou. O número da sorte era " + numeroDaSorte);
+    }
+</script>
+
+    

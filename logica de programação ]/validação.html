@@ -1,0 +1,146 @@
+
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+        var nome = "nome"
+        var idade = 0;
+        var salario = 0;
+        var sexo = "sexo"
+        var estadoCivil = "estado civil"
+   
+        
+    
+
+            function validarnome (nome)
+            {
+                return nome.length > 3;
+            }
+
+            function validaridade (idade)
+            {
+                return idade >= 0 && idade <= 150;
+            }
+              
+            function validarSalario (salario)
+            {
+                return salario > 0;
+            }    
+                
+            function validarSexo (sexo)
+            {
+                return sexo = "M" && "F";
+            }
+
+            function validarEstado (estado)
+            {
+                return estadoCivil = "S" && "C" && "V" && "V";
+            }  
+            var vezes = 1;
+                    while( vezes <= 1 )
+                    {
+
+                            var nomeEScolhido = prompt("informe seu nome")
+                            nome = nomeEScolhido
+                            vezes++;
+                            
+                                if( validarnome(nome))
+                                {  
+                                        mostra("nome esta certo com tres caracteres " + nome )
+                                        vezes = 0;
+                                        break;
+
+                                }else{
+                                    
+                                    mostra("nome esta incorreto");
+                
+                                    }
+                    }              
+                    while( vezes <= 1  )
+                    {
+    
+                            var idadeEscolhida = prompt("informe seu idade")
+                            idade = idadeEscolhida
+                            vezes++;
+        
+                                if(validaridade(idade))
+                                {
+                                    mostra("idade esta certa voce tem " + idade + " anos ")
+                                    vezes = 0;
+                                    break;             
+            
+                                }else{
+            
+                                        mostra("idade esta errada");  
+            
+                                     }
+                            
+                    }
+                    while( vezes <= 1 )
+                    {
+                             var salarioEscolhido = prompt("informe seu salario")
+                             salario = salarioEscolhido
+                             vezes++;
+        
+                                if(validarSalario(salario))
+                                {
+                                    mostra("salario esta correto é " + salario ) 
+                                    vezes = 0;  
+                                    break;
+                                    
+                                }else{
+            
+                                     mostra("salrio errado")
+            
+                                }
+                    }
+                    while( vezes <= 1 )
+                    {
+                             var sexoEscolhido = prompt("informe seu sexo")
+                             sexo = sexoEscolhido
+                             vezes++;
+        
+                                if(validarSexo(sexo))
+                                {
+                                    mostra(" se sexo esta correto é " + sexo ) 
+                                    vezes = 2;  
+                                    break;
+                                    
+                                }else{
+            
+                                     mostra("seu sexo esta errado")
+            
+                                    }            
+                    }
+                   
+                     
+
+
+
+               
+
+            
+
+
+            
+              
+         
+            
+            
+
+
+
+        
+        
+        
+ </script>
